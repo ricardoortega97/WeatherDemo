@@ -12,6 +12,8 @@ struct WeatherView: View {
     
     var body: some View {
         ZStack(alignment: .leading){
+            getBackgroundColor(for: weather)
+                .edgesIgnoringSafeArea(.all)
             VStack {
                 //Top Head
                 VStack(alignment: .leading, spacing: 5) {
@@ -20,6 +22,7 @@ struct WeatherView: View {
                     Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
                         .fontWeight(.light)
                 }
+                .safeAreaPadding(.top,40)
                 .frame(maxWidth:.infinity, alignment: .leading)
                 
                 Spacer()
@@ -27,7 +30,8 @@ struct WeatherView: View {
                 VStack {
                     HStack {
                         VStack(spacing: 20) {
-                            Image(systemName: "cloud")
+                            //using dynamic icon calling from the components group
+                            Image(systemName: WeatherIconHelper.getWeatherIcon(for: weather.weather[0].main))
                                 .font(.system(size: 40))
                             
                             Text(weather.weather[0].main)
@@ -35,9 +39,9 @@ struct WeatherView: View {
                         .frame(width: 150, alignment: .leading)
                         
                         Spacer()
-                        
-                        Text(weather.main.feelsLike.roundDouble() + "°")
-                            .font(.system(size: 100))
+                        //Display temp top left current weather tempature 
+                        Text(weather.main.temp.roundDouble() + "°")
+                            .font(.system(size: 75))
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .padding()
                     }
@@ -78,7 +82,7 @@ struct WeatherView: View {
                         WeatherRow(logo: "wind", name: "Winds Speed", value: (
                             weather.wind.speed.roundDouble() + "m/s"))
                         Spacer()
-                        WeatherRow(logo: "humidity", name: "Max Temp", value: (
+                        WeatherRow(logo: "humidity", name: "Humidty", value: (
                             weather.main.humidity.roundDouble() + "%"))
                     }
                 }
@@ -90,8 +94,7 @@ struct WeatherView: View {
                 .cornerRadius(20, corners: [.topLeft, .topRight])
             }
         }
-        .edgesIgnoringSafeArea(.bottom)
-        .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
+        .edgesIgnoringSafeArea(.all)
         .preferredColorScheme(.dark)
     }
 }

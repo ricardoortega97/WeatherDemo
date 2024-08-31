@@ -5,8 +5,8 @@
     },
     "weather": [
         {
-            "id": 804,
-            "main": "Clouds",
+            "id": 800,
+            "main": "clear sky",
             "description": "overcast clouds",
             "icon": "04n"
         }

@@ -23,6 +23,8 @@
 		51A593A32C8296EE0070289E /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A593A22C8296EE0070289E /* ModelData.swift */; };
 		51A593A52C8298600070289E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A593A42C8298600070289E /* Extensions.swift */; };
 		51A593A82C83828F0070289E /* WeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A593A72C83828F0070289E /* WeatherRow.swift */; };
+		51A593AA2C83B56A0070289E /* WeatherIconHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A593A92C83B56A0070289E /* WeatherIconHelper.swift */; };
+		51A593AC2C83BF840070289E /* WeatherBackgroundHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A593AB2C83BF840070289E /* WeatherBackgroundHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		51A593A22C8296EE0070289E /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		51A593A42C8298600070289E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		51A593A72C83828F0070289E /* WeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRow.swift; sourceTree = "<group>"; };
+		51A593A92C83B56A0070289E /* WeatherIconHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIconHelper.swift; sourceTree = "<group>"; };
+		51A593AB2C83BF840070289E /* WeatherBackgroundHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBackgroundHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				51A593A72C83828F0070289E /* WeatherRow.swift */,
+				51A593A92C83B56A0070289E /* WeatherIconHelper.swift */,
+				51A593AB2C83BF840070289E /* WeatherBackgroundHelper.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -213,6 +219,8 @@
 				51A5937F2C82466B0070289E /* Persistence.swift in Sources */,
 				51A5938E2C824ACE0070289E /* WelcomeView.swift in Sources */,
 				51A593952C8276BC0070289E /* WeatherManager.swift in Sources */,
+				51A593AC2C83BF840070289E /* WeatherBackgroundHelper.swift in Sources */,
+				51A593AA2C83B56A0070289E /* WeatherIconHelper.swift in Sources */,
 				51A593A82C83828F0070289E /* WeatherRow.swift in Sources */,
 				51A593982C8286500070289E /* Configuration.swift in Sources */,
 				51A593822C82466B0070289E /* WeatherDemo.xcdatamodeld in Sources */,
