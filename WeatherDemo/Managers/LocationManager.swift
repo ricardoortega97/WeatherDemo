@@ -23,12 +23,13 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         isloading = true
         manager.requestLocation()
     }
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations location: [CLLocation]) {
-        let location = location.first?.coordinate
-        isloading = false//Got the location therefore now false
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        location = locations.first?.coordinate
+        isloading = false //Got the location therefore now false
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: any Error) {
         print("Error getting location", error)
         isloading = false
     }
+    
 }
