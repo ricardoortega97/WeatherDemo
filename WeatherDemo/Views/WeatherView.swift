@@ -58,12 +58,29 @@ struct WeatherView: View {
             }
             .padding()
             .frame(maxWidth:.infinity, alignment: .leading)
-            
+            //Bottom Body
             VStack {
                 Spacer()
                 
                 VStack(alignment: .leading, spacing: 20) {
-                    
+                    Text("Weather Now")
+                        .bold().padding(.bottom)
+                    //Temps
+                    HStack {
+                        WeatherRow(logo: "thermometer", name: "Min Temp", value: (
+                            weather.main.tempMin.roundDouble() + "°"))
+                        Spacer()
+                        WeatherRow(logo: "thermometer", name: "Max Temp", value: (
+                            weather.main.tempMax.roundDouble() + "°"))
+                    }
+                    //wind Icon
+                    HStack {
+                        WeatherRow(logo: "wind", name: "Winds Speed", value: (
+                            weather.wind.speed.roundDouble() + "m/s"))
+                        Spacer()
+                        WeatherRow(logo: "humidity", name: "Max Temp", value: (
+                            weather.main.humidity.roundDouble() + "%"))
+                    }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
