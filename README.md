@@ -13,8 +13,6 @@ and weather icons that adapt based on current weather conditions and the time of
 - Simple and clean user interface designed using SwiftUI.
 
 ## Design
-## Design
-
 <!-- Container for Flexbox-like layout -->
 <div style="display: flex; justify-content: space-around; align-items: center;">
 
