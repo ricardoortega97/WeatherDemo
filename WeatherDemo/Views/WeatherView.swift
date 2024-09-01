@@ -39,7 +39,7 @@ struct WeatherView: View {
                         .frame(width: 150, alignment: .leading)
                         
                         Spacer()
-                        //Display temp top left current weather tempature 
+                        //Display temp top left current weather tempature
                         Text(weather.main.temp.roundDouble() + "°")
                             .font(.system(size: 75))
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -48,14 +48,12 @@ struct WeatherView: View {
                     Spacer()
                         .frame(height: 80)
                     //Image of the condition of the weather
-                    AsyncImage(url: URL(string: "https://png.pngtree.com/png-vector/20220621/ourmid/pngtree-cloudy-weather-forecast-cloud-overcast-png-image_5246453.png" )) {
-                        image in image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 300)
-                    } placeholder: {
-                        ProgressView()
-                    }
+                    let iconName = WeatherIconHelper.getWeatherIconName(for: weather.weather[0].main)
+                                    Image(iconName)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 250)
+
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)

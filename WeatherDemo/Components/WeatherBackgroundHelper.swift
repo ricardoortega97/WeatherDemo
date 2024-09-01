@@ -20,7 +20,7 @@ func getBackgroundColor(for weather: ResponseBody) -> Color {
         } else if hour < 12 {
             return Color.blue.opacity(0.3) // Morning
         } else if hour < 18 {
-            return Color.yellow.opacity(0.3) // Afternoon
+            return Color.yellow.opacity(0.8) // Afternoon
         } else {
             return Color.orange.opacity(0.5) // Evening
         }
@@ -29,7 +29,7 @@ func getBackgroundColor(for weather: ResponseBody) -> Color {
     case "rain":
         return Color.blue.opacity(0.7)
     case "snow":
-        return Color.white.opacity(0.9)
+        return Color.white.opacity(0.8)
         // Add more weather conditions as needed
     default:
         return Color(hue: 0.656, saturation: 0.787, brightness: 0.354)
