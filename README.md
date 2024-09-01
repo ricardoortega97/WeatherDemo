@@ -12,12 +12,23 @@ and weather icons that adapt based on current weather conditions and the time of
 - Custom weather icons based on the weather conditions.
 - Simple and clean user interface designed using SwiftUI.
 
-## Deisgn 
+## Design
+## Design
 
-<a href="https://imgur.com/a/mwOhp6P">
-  <img src="https://i.imgur.com/oWlnTnd.gif" title="source: imgur.com" style="width: 75%; height: auto;" />
-</a>
-  
+<!-- Container for Flexbox-like layout -->
+<div style="display: flex; justify-content: space-around; align-items: center;">
+
+  <!-- Link to the Imgur album -->
+  <a href="https://imgur.com/a/mwOhp6P">
+    <!-- Image from Imgur with adjusted width -->
+    <img src="https://i.imgur.com/oWlnTnd.gif" title="source: imgur.com" style="width: 75%; height: auto;" />
+  </a>
+
+  <!-- Local image with the same size as the GIF -->
+  <img src="screenshots/SunnySF.png" alt="Design" style="width: 25%; height: auto;" />
+
+</div>
+
 ## Installation
 
 1. Clone this repository:
